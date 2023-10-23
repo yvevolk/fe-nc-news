@@ -23,6 +23,7 @@ return (
            
             <ul className = 'articles'>
             <li key = {article.article_id}><ArticleCard 
+            id = {article.article_id}
             title = {article.title}
             author = {article.author}
             topic = {article.topic}
