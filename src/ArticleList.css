@@ -1,0 +1,18 @@
+.article-list {
+    border: 3px purple solid;
+    font-family: 'ubuntu';
+    overflow-y: scroll;
+}
+
+.article-header {
+    font-size: 2em;
+    text-align: left;
+    margin-left: 10%
+}
+
+.articles {
+    list-style-type: none;
+    padding-left: 5%;
+    margin-left: 5%;
+    margin-right: 5%
+}
