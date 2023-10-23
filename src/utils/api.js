@@ -17,7 +17,7 @@ export const getArticles = () => {
 }
 
 export const getSingleArticle = (id) => {
-    return newsApi.get('/articles/:article_id').then((res) => {
+    return newsApi.get('/articles/:id').then((res) => {
         return res.data.article;
     })
 }
