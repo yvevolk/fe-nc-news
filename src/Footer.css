@@ -1,0 +1,9 @@
+footer {
+    font-family: 'ubuntu';
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(216, 216, 216);
+}

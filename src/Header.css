@@ -1,0 +1,44 @@
+#full-header {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    font-family: 'ubuntu';
+}
+
+header {
+    border: 3px red solid;
+    text-align: right;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.tagline {
+        font-style: italic;
+        margin-top:0;
+        margin-left: 10px;
+        margin-right: 50px;
+        margin-bottom: 5px;
+        padding-bottom: 20px;
+}
+
+nav {
+    width: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 3px orange solid;
+}
+
+.navigation {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
