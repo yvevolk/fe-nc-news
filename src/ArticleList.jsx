@@ -19,9 +19,8 @@ return (
         <h2 className = 'article-header'>Articles</h2>
         {articles.map((article) => {
             return(
-            <>
-            <ul className = 'articles'>
-            <li key = {article.article_id}><ArticleCard 
+            <ul className = 'articles' key = {article.article_id}>
+            <li><ArticleCard 
             id = {article.article_id}
             title = {article.title}
             author = {article.author}
@@ -32,7 +31,7 @@ return (
             image = {article.article_img_url}
             /></li>
             </ul>
-            </>)
+            )
         })
         }
     </section>

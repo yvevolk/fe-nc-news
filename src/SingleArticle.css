@@ -1,0 +1,87 @@
+article {
+    font-family: 'ubuntu';
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%
+}
+
+#comments {
+    font-family: 'ubuntu';
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 30px;
+    width: 80%
+}
+
+#votes {
+    text-align: center;
+    font-family: 'ubuntu';
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80% 
+}
+
+#back-button {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-family: 'ubuntu';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 80%;
+    background-color: rgb(223, 223, 223);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+#main-image {
+    display: block;
+    padding-left: auto;
+    padding-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 10;
+    max-height: 10;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.single-topic {
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 0px;
+    background-color: #6c0b0b;
+    color: white;
+    width: 50px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+#vote-button {
+    align-items: center;
+    border: 0;
+    border-radius: 10%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin: 50px;
+    width: 100px;
+    height: 30px;
+}
+
