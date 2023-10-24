@@ -1,7 +1,7 @@
 import './ArticleList.css';
 import ArticleCard from './ArticleCard.jsx'
 import {useState, useEffect} from 'react';
-import {getArticles} from './utils/api';
+import {getArticles} from './utils/api.js';
 import {format} from 'date-fns'
 import Loader from './Loader.jsx'
 

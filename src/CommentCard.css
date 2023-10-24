@@ -1,0 +1,31 @@
+.single-comment{
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8%;
+}
+
+.author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.body{
+    margin-top: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%
+}
+
+.votes{
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

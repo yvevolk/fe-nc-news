@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import { getSingleArticle } from "./utils/api";
 import { format } from 'date-fns'
 import Loader from './Loader.jsx'
+import CommentList from "./CommentList";
 import './SingleArticle.css'
+
 
 const SingleArticle = () => {
 const {article_id} = useParams();
@@ -40,7 +42,7 @@ if (isLoading) return <Loader/>
         <a id = 'back-button' href = '../articles'>Back</a>
         <section id = 'comments'>
             <h2>Comments: {article.comment_count}</h2>
-            <p>Comments coming soon</p>
+            <CommentList/>
         </section>
         </>
     )
