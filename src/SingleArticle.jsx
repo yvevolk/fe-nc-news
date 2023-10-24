@@ -1,6 +1,21 @@
+import { useState, useEffect } from "react";
+import { getSingleArticle } from "./utils/api";
+
 const ArticleList = () => {
+
+const [article, setSingleArticle] = useState({})
+useEffect(() => {
+    getSingleArticle()
+    .then((article) => {
+        setArticles(article)
+    })
+})
+
     return (
-        <p>SINGLE ARTICLE!</p>
+        <>
+        <h2>Single article title</h2>
+        <p>Single article text</p>
+        </>
     )
 }
 

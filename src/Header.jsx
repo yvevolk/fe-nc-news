@@ -11,9 +11,10 @@ const Header = () => {
         .then((topics) => {
             setTopics(topics)
         })
-    })
+    }, [])
+
 return (
-    <div id = 'full-header'>
+    <div id= 'fullheader'>
     <header>
     <h1>NC News</h1>
     <p className = 'tagline'>The latest and greatest news</p>

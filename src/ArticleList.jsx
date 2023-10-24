@@ -12,7 +12,7 @@ useEffect(() => {
     .then((articles) => {
         setArticles(articles)
     })
-})
+}, [])
 
 return (
     <section className = 'article-list'>
@@ -20,7 +20,6 @@ return (
         {articles.map((article) => {
             return(
             <>
-           
             <ul className = 'articles'>
             <li key = {article.article_id}><ArticleCard 
             id = {article.article_id}
@@ -34,7 +33,6 @@ return (
             /></li>
             </ul>
             </>)
-            
         })
         }
     </section>

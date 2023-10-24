@@ -11,7 +11,7 @@ const ArticleCard = ({id, title, topic, author, date, votes, comments, image}) =
             <ul className = 'article-topic'><li className = 'single-topic' key = 'topic'>{topic}</li></ul>
             <p className = 'article-date' key = 'date'>Posted: {date}</p>
             <p className = 'article-comments' key = 'comments'>Comments: {comments}</p>
-            <Link to = '/articles/1'><p className = 'read-button' name ='read more'>Read more</p></Link>
+            <Link to = {`/articles/${id}`}><p className = 'read-button' name ='read more'>Read more</p></Link>
             <img className = 'article-image' src = {`${image}`}/>
            
             </div>
