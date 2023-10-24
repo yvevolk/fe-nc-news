@@ -1,0 +1,7 @@
+.comment-list {
+    list-style-type: none;
+    background-color: rgb(223, 223, 223);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
