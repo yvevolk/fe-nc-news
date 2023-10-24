@@ -9,7 +9,7 @@ return (
     <Routes>
         <Route path = '/' element = {<ArticleList/>}/>
         <Route path = '/articles' element = {<ArticleList/>}/>
-        <Route path = '/articles/*' element = {<SingleArticle/>}/>
+        <Route path = '/articles/:article_id' element = {<SingleArticle/>}/>
         </Routes>
     </main>
 )
