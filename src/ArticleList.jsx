@@ -3,16 +3,22 @@ import ArticleCard from './ArticleCard.jsx'
 import {useState, useEffect} from 'react';
 import {getArticles} from './utils/api';
 import {format} from 'date-fns'
+import Loader from './Loader.jsx'
 
 const ArticleList = () => {
-
+const [isLoading, setIsLoading] = useState(true)
 const [articles, setArticles] = useState([])
+
 useEffect(() => {
+    setIsLoading(true)
     getArticles()
     .then((articles) => {
         setArticles(articles)
+        setIsLoading(false)
     })
 }, [])
+
+if(isLoading) return <Loader/>
 
 return (
     <section className = 'article-list'>

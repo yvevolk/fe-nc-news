@@ -1,20 +1,26 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { getSingleArticle } from "./utils/api";
-import { format, parseISO } from 'date-fns'
+import { format } from 'date-fns'
+import Loader from './Loader.jsx'
 import './SingleArticle.css'
 
 const SingleArticle = () => {
 const {article_id} = useParams();
 const [formattedDate, setFormattedDate] = useState('')
+const [isLoading, setIsLoading] = useState(true)
 const [article, setSingleArticle] = useState({})
 useEffect(() => {
+    setIsLoading(true)
     getSingleArticle(article_id)
     .then((article) => {
         setFormattedDate(format(new Date(`${article.created_at}`), 'EEE d MMM yyyy HH:mm a'))
         setSingleArticle(article)
+        setIsLoading(false)
     })
 }, [article_id])
+
+if (isLoading) return <Loader/>
 
     return (
         <>
