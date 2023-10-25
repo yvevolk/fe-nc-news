@@ -12,7 +12,7 @@
     padding-bottom: 4em;
     align-items: top;
     justify-items: start;
-    border-radius: 1em;
+    border-radius: 10px;
 }
 
 .article-title {
@@ -96,7 +96,7 @@
 }
 button {
     border: 0;
-    border-radius: 10%;
+    border-radius: 10px;
     text-decoration: none;
 }
 
@@ -125,7 +125,7 @@ a {
     grid-column-end: 3;
     width: 100%;
     margin-top: 1em;
-    text-align: center; 
+    text-align: center;
     }
 
 .read-button {
@@ -137,4 +137,25 @@ a {
     padding-left: 50px;
     padding-right: 50px;
     align-self: stretch;
+    background-color: rgb(223, 223, 223);
+}
+
+.read-button:hover {
+    background-color:rgb(186, 186, 186);
+}
+
+.vote-count {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    outline: 3px solid rgb(223, 223, 223);
+    width: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+
+.vote-box-content{
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
