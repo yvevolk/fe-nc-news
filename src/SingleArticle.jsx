@@ -4,14 +4,15 @@ import { getSingleArticle } from "./utils/api";
 import { format } from 'date-fns'
 import Loader from './Loader.jsx'
 import CommentList from "./CommentList";
+import VoteCount from './VoteCount.jsx'
 import './SingleArticle.css'
-
 
 const SingleArticle = () => {
 const {article_id} = useParams();
 const [formattedDate, setFormattedDate] = useState('')
 const [isLoading, setIsLoading] = useState(true)
 const [article, setSingleArticle] = useState({})
+
 useEffect(() => {
     setIsLoading(true)
     getSingleArticle(article_id)
@@ -35,14 +36,10 @@ if (isLoading) return <Loader/>
         <img id = 'main-image' src = {article.article_img_url}/>
         <p>{article.body}</p></div>
         </article>
-        <section id = 'votes'>
-            <label htmlFor="vote-button">Did you like this article? Give it a vote!</label>
-            <button id = 'vote-button' aria-label='vote'>👍 {article.votes}</button>
-        </section>
+        <VoteCount votes = {article.votes} article_id = {article_id}/>
         <a id = 'back-button' href = '../articles'>Back</a>
         <section id = 'comments'>
-            <h2>Comments: {article.comment_count}</h2>
-            <CommentList/>
+         <h2>Comments: {article.comment_count}</h2> <CommentList/>
         </section>
         </>
     )
