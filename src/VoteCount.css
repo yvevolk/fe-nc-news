@@ -1,0 +1,37 @@
+
+#votes {
+    text-align: center;
+    font-family: 'ubuntu';
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80% 
+}
+
+#vote-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.vote-instructions{
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#vote-counter-container {
+    width: 60px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.vote-button {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(223, 223, 223);
+}
+
+.vote-button:hover {
+    background-color: rgb(186, 186, 186);
+}
