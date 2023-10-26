@@ -5,6 +5,10 @@ article {
     width: 80%
 }
 
+.body-text {
+    padding-bottom: 30px;
+}
+
 h2 {
     font-size: 2em;
     margin-bottom: 0;
@@ -46,10 +50,9 @@ h2 {
     padding-left: 10%;
     padding-right: 10%;
     margin: 30px;
-    width: 80%
 }
 
-#back-button {
+.big-button {
     font-weight: bold;
     text-decoration: none;
     color: black;
@@ -57,8 +60,8 @@ h2 {
     font-family: 'ubuntu';
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 10%;
-    margin-left: 13%;
+    border-radius: 10px;
+    margin-left: 10%;
     margin-right: 10%;
     padding-left: 5%;
     padding-right: 5%;
@@ -66,3 +69,28 @@ h2 {
     background-color: rgb(223, 223, 223);
 }
 
+#comment-adder{
+    border-radius: 10px;
+    padding: 30px;
+    background-color: rgb(223,223,223);
+}
+
+#show-button-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#show-button {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-family: 'ubuntu';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    background-color: rgb(223, 223, 223);
+}

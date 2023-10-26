@@ -34,3 +34,10 @@ export const updateVotes = (value, article_id) => {
         return res.data.votes;
     })
 }
+
+export const postComment = (newComment, article_id) => {
+    console.log(newComment)
+    return newsApi.post(`/articles/${article_id}/comments`, newComment).then((res) => {
+        return res.data.comment;
+    })
+}

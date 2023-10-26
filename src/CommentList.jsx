@@ -32,6 +32,7 @@ return (
                     author=  {comment.author}
                     body= {comment.body}
                     time= {format(new Date(`${comment.created_at}`), 'EEE d MMM yyyy HH:mm a')}
+                    votes= {comment.votes}
                     />
                 </li>
             </ul>
