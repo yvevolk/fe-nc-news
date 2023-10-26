@@ -1,5 +1,5 @@
 import './CommentAdder.css'
-import { postComment } from './utils/api';
+import { getComments, postComment } from './utils/api';
 import { useState } from 'react';
 
 const CommentAdder = ({article_id}) => {
