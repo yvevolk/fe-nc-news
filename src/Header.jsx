@@ -1,7 +1,7 @@
 import './Header.css';
 import { useState, useEffect } from 'react';
 import {Route, Routes, Link} from 'react-router-dom';
-import {getTopics} from './utils/api.js'
+import {getTopics, getArticles} from './utils/api.js'
 
 
 const Header = () => {
@@ -21,9 +21,9 @@ return (
     </header>
     <nav>
         <ul className = 'navigation'>
-                <li>Home</li>
+                <button className='nav-button'><Link to = "/">Home</Link></button>
                 {topics.map((topic) => {
-                    return (<li key = {topic.slug}>{topic.slug}</li>)
+                    return (<button key = {topic.slug} value = {topic.slug} className = 'nav-button'><Link to = {`/articles?topic=${topic.slug}`}> {topic.slug} </Link></button>)
                 })}
             </ul>
     </nav>
