@@ -5,6 +5,7 @@ import { format } from 'date-fns'
 import Loader from './Loader.jsx'
 import CommentList from "./CommentList";
 import VoteCount from './VoteCount.jsx'
+import CommentAdder from './CommentAdder.jsx'
 import './SingleArticle.css'
 
 const SingleArticle = () => {
@@ -12,6 +13,19 @@ const {article_id} = useParams();
 const [formattedDate, setFormattedDate] = useState('')
 const [isLoading, setIsLoading] = useState(true)
 const [article, setSingleArticle] = useState({})
+const [commentSection, showCommentSection] = useState(<></>)
+const [showButtonText, changeShowButtonText] = useState('Show comments')
+
+const showComments = () => {
+    if (showButtonText === 'Show comments'){
+    showCommentSection(
+        <div className = 'comments-section'>
+        <h2>Comments: {article.comment_count}</h2>
+        <CommentList/>
+        </div>)
+changeShowButtonText('Hide comments')}
+else {showCommentSection(<></>); changeShowButtonText('Show comments')}
+}
 
 useEffect(() => {
     setIsLoading(true)
@@ -34,13 +48,15 @@ if (isLoading) return <Loader/>
         <p>Posted on: {formattedDate} </p>
         <div id = 'article-body'>
         <img id = 'main-image' src = {article.article_img_url}/>
-        <p>{article.body}</p></div>
-        </article>
+        <p className = 'body-text'>{article.body}</p></div>
+        </article>  <a className = 'big-button' href = '../articles'>Back</a>
         <VoteCount votes = {article.votes} article_id = {article_id}/>
-        <a id = 'back-button' href = '../articles'>Back</a>
         <section id = 'comments'>
-         <h2>Comments: {article.comment_count}</h2> <CommentList/>
-        </section>
+        <div id = 'comment-adder'>
+        <CommentAdder comment = '' article_id = {article_id}/>
+        </div></section>
+        <div id = 'show-button-container'><button id = 'show-button' onClick ={showComments}>{showButtonText}</button></div>
+        {commentSection}
         </>
     )
 }
