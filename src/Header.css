@@ -5,10 +5,11 @@
     width: 100%;
     background-color: white;
     font-family: 'ubuntu';
+    filter: drop-shadow(0px 10px 10px #00000057);
+    z-index: 1;
 }
 
 header {
-    border: 3px red solid;
     text-align: right;
     margin-top: 0;
 }
@@ -29,16 +30,43 @@ h1 {
         padding-bottom: 20px;
 }
 
+a {
+    color: black;
+}
+
 nav {
     width: auto;
     padding-top: 0px;
     padding-bottom: 0px;
-    border: 3px orange solid;
 }
 
 .navigation {
-    list-style-type: none;
     display: flex;
     justify-content: space-around;
+    text-transform: capitalize;;
+}
+
+.nav-button{
+    font-family: 'ubuntu';
+    font-weight: bold;
+    background-color: white;
+    color: black;
     text-transform: capitalize;
+    font-size: 18px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.nav-button:hover{
+    color: black;
+    background-color: rgb(223, 223, 223);
+}
+
+.nav-button:visited{
+    color: black;
+}
+
+.nav-button:active{
+    color: black;
 }

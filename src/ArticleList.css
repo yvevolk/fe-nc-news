@@ -1,5 +1,4 @@
 .article-list {
-    border: 3px purple solid;
     font-family: 'ubuntu';
     overflow-y: scroll;
 }
@@ -7,7 +6,9 @@
 .article-header {
     font-size: 2em;
     text-align: left;
-    margin-left: 10%
+    margin-left: 10%;
+    padding-bottom: 20px;
+    text-transform: capitalize;
 }
 
 .articles {

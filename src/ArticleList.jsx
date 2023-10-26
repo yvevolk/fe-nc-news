@@ -4,25 +4,28 @@ import {useState, useEffect} from 'react';
 import {getArticles} from './utils/api.js';
 import {format} from 'date-fns'
 import Loader from './Loader.jsx'
+import { useSearchParams } from 'react-router-dom';
 
 const ArticleList = () => {
 const [isLoading, setIsLoading] = useState(true)
 const [articles, setArticles] = useState([])
+const [searchParams] = useSearchParams()
+const topic = (searchParams.get('topic'))
 
 useEffect(() => {
     setIsLoading(true)
-    getArticles()
+    getArticles(topic)
     .then((articles) => {
         setArticles(articles)
         setIsLoading(false)
     })
-}, [])
+}, [searchParams])
 
 if(isLoading) return <Loader/>
 
 return (
     <section className = 'article-list'>
-        <h2 className = 'article-header'>Articles</h2>
+        <h2 className = 'article-header'>{topic} Articles</h2>
         {articles.map((article) => {
             return(
             <ul className = 'articles' key = {article.article_id}>

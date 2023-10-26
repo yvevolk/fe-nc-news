@@ -19,7 +19,7 @@ const addVote = (value) => {
         <button className = 'vote-button' id = 'vote-button-up' aria-label='vote up' disabled = {voteDifference === 1} onClick={() => {
             addVote(1)
         }}>👍</button>
-        <div id = 'vote-counter-container'>
+        <div className = 'vote-counter-container'>
         <p className = 'vote-counter'>{votes + voteDifference}</p></div>
         <button className = 'vote-button' id = 'vote-button-down' aria-label='vote down' 
         disabled = {voteDifference === -1} onClick={() => {
