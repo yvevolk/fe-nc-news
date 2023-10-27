@@ -10,9 +10,9 @@ export const getTopics = () => {
     })
 }
 
-export const getArticles = (filters) => {
-    console.log(filters)
-    return newsApi.get('/articles/', {params: {topic: filters}}).then((res) => {
+export const getArticles = (filters, sort_by) => {
+    console.log(filters, sort_by)
+    return newsApi.get('/articles/', {params: {topic: filters, sort_by: sort_by}}).then((res) => {
         return res.data.articles;
     })
 }
