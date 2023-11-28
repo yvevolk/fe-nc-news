@@ -1,6 +1,5 @@
 import './CommentAdder.css'
 import { postComment } from './utils/api';
-import { useState } from 'react';
 const exampleUsername = 'grumpy19';
 
 const CommentAdder = ({article_id}) => {
@@ -10,19 +9,12 @@ const CommentAdder = ({article_id}) => {
            "author": exampleUsername,
            }, article_id)
            .then((res) => {
-            setConfirmation(<p>Comment posted succesfully!</p>)
+            alert('Comment posted!')
            })
            .catch((err) => {
-            console.log(err)
-            setConfirmation(<p>Error: invalid username</p>)
+            alert('Something went wrong!')
            })
         e.preventDefault();
-    }
-
-    const [confirmation, setConfirmation] = useState(<></>)
-
-const handleReset = () => {
-      setConfirmation(<></>)
     }
 
       return(
@@ -32,8 +24,6 @@ const handleReset = () => {
           <p><span>Logged in as:</span> {exampleUsername}</p>
           <p><label htmlFor = 'comment-text' required>Comment:</label><br/><textarea id = 'comment-text' name = 'comment-text' placeholder = 'Type your comment here' required></textarea></p> 
           <button className = 'comment-button' id = 'submit'>Submit</button>
-          <button className = 'comment-button' type="reset" onClick = {handleReset}>Reset</button>
-          {confirmation}
         </form>
         </>
     )

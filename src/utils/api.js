@@ -37,8 +37,14 @@ export const updateVotes = (value, article_id) => {
 }
 
 export const postComment = (newComment, article_id) => {
-    console.log(newComment)
     return newsApi.post(`/articles/${article_id}/comments`, newComment).then((res) => {
+        return res.data.comment;
+    })
+}
+
+export const deleteComment = (comment_id) => {
+    return newsApi.delete(`/comments/${comment_id}`).then((res) => {
+        console.log('comment deleted')
         return res.data.comment;
     })
 }

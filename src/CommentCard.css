@@ -23,7 +23,21 @@
     width: 90%
 }
 
+.comment-buttons {
+    display: flex;
+    justify-content:space-between;
+    width: 80%
+}
+
 .votes{
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.delete{
     background-color: white;
     padding-top: 5px;
     padding-bottom: 5px;

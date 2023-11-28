@@ -29,6 +29,7 @@ return (
             <ul className = 'comment-list' key = {comment.comment_id}>
                 <li>
                     <CommentCard
+                    comment_id = {comment.comment_id}
                     author=  {comment.author}
                     body= {comment.body}
                     time= {format(new Date(`${comment.created_at}`), 'EEE d MMM yyyy HH:mm a')}
