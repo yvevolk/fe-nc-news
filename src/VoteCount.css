@@ -31,9 +31,13 @@
     font-size: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: rgb(223, 223, 223);
+    background-color: #B47978;
 }
 
 .vote-button:hover {
-    background-color: rgb(186, 186, 186);
+    background-color: #732A3F;
+}
+
+.vote-button:disabled {
+    background-color: #732A3F;
 }

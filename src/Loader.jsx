@@ -4,8 +4,8 @@ const Loader = () => {
     return (
         <>
 <div className = 'load-container'>
-<div className="loadingio-spinner-spinner-h8ybbyjpnjf">
-    <div className="ldio-0n2gwg8zkzdr">
+<div className="loadingio-spinner-ball-v2raoxwpwj">
+    <div className="ldio-f1mhcpwa1wa">
 <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 </div></div>
 <p className = 'loading-text'>Loading...</p>

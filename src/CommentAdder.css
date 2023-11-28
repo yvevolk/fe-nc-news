@@ -8,7 +8,6 @@ label {
 }
 
 input {
-    border: 1px rgb(186, 186, 186);
     border-radius: 5px;
     font-size: 1em;
     font-family: 'ubuntu';
@@ -31,10 +30,11 @@ textarea {
     margin-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: white;
+    background-color: #E9D8D8;
     font-family: 'ubuntu'
 }
 
 .comment-button:hover {
-    background-color:rgb(186, 186, 186);
+    background-color: #732A3F;
+    color: white;
 }
