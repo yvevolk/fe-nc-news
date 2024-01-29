@@ -49,7 +49,7 @@ if (isLoading) return <Loader/>
         <div id = 'article-body'>
         <img id = 'main-image' src = {article.article_img_url}/>
         <p className = 'body-text'>{article.body}</p></div>
-        </article>  <a className = 'big-button' href = '../articles'>Back</a>
+        </article>  <a className = 'big-button' href = '/'>Back</a>
         <VoteCount votes = {article.votes} article_id = {article_id}/>
         <section id = 'comments'>
         <div id = 'comment-adder'>
