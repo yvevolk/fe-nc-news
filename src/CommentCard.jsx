@@ -1,4 +1,3 @@
-import './CommentCard.css'
 import { deleteComment } from './utils/api';
 const exampleUsername = 'grumpy19';
 
@@ -17,11 +16,11 @@ const deleteHandler = (e) => {
 
     return(
         <div className = 'single-comment'>
-            <div className = 'details'>
-            <p key = 'author' className ='author'>{author} said:</p>
-            <p key = 'time' className = 'time'>At {time}</p>
+            <div className = 'comment-details'>
+            <p key = 'author' className ='comment-author'>{author} said:</p>
+            <p key = 'time' className = 'comment-date'>{time}</p>
             </div>
-            <p key = 'body' className = 'body'>{body}</p>
+            <p key = 'body' className = 'comment-body'>{body}</p>
             <div className = 'comment-buttons'>
             <button key = 'votes' className = 'votes' aria-label='votes'>{votes} 👍</button>
             {author === exampleUsername && (

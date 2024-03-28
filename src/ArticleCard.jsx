@@ -6,7 +6,7 @@ const ArticleCard = ({id, title, topic, author, date, votes, comments, image}) =
         <>
         <div className = 'article-card'>
             <h3 className = 'article-title' key = 'title'>{title}</h3>
-            <ul className = 'article-topic'><li className = 'single-topic' key = 'topic'>{topic}</li></ul>
+            <p className = 'single-topic' key = 'topic'>{topic}</p>
             <p className = 'article-author' key = 'author'>By {author}</p>
             <p className = 'article-date' key = 'date'>Posted: {date}</p>
             <img className = 'article-image' src = {`${image}`}/>

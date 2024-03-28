@@ -1,4 +1,3 @@
-import './CommentList.css'
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {getComments} from './utils/api.js'
