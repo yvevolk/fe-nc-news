@@ -1,5 +1,6 @@
 
 body {
+    font-family: 'ubuntu';
     margin: 0;
     ::-webkit-scrollbar {
         display: none;
@@ -10,13 +11,47 @@ body {
 button {
     border: 0;
     border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    padding: 20px;
+    align-self: stretch;
+    background-color: #E9D8D8;
 }
 
+button:hover {
+    background-color: #B47978;
+}
+
+button:disabled {
+    background-color: #B47978;
+}
 
 a {
     color: #E9D8D8;
     text-decoration: none;
 }
+
+hr.rounded {
+    margin: 5%;
+    border-top: 3px solid black;
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #732A3F;
+    color: white;
+}
+
+h2 {
+    margin-left: 0;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
 
 /* Header */
 
@@ -75,10 +110,19 @@ header{
     margin-right: 10%;
  }
 
+.article-surround {
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1em;
+    border-radius: 1em;
+}
+
 /* Article list */
  
 #articles-header {
-    font-size: 2em;
     padding-bottom: 20px;
     text-transform: capitalize;
 }
@@ -117,6 +161,22 @@ padding-bottom: 3%;
     font-weight: bold;
 }
 
+.single-topic {
+    width: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 1em;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 0px;
+    background-color: #732A3F;
+    color: white;
+}
+
 .article-author {
     font-weight: bold;
 }
@@ -147,31 +207,121 @@ padding-bottom: 3%;
     border-radius: 1em;
 }
 
-.read-button {
-    font-size: 1em;
-    font-weight: bold;
-    width: 100%;
-    padding: 20px;
-    align-self: stretch;
-    background-color: #E9D8D8;
-}
-
-.read-button:hover {
-    background-color: #B47978;
-}
-
 .vote-comment-count {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
 }
 
-footer {
-    font-family: 'ubuntu';
-    text-align: center;
-    bottom: 0;
-    overflow: hidden;
+/* Article pages */
+
+.blurb {
+    font-weight:bold;
+    text-align: justify;
+}
+
+.body-text {
+    text-align: justify;
+}
+
+#main-image {
     width: 100%;
-    background-color: #732A3F;
-    color: white;
+    border-radius: 1em;
+    object-fit: cover;
+}
+
+/* Vote counter */
+
+.vote-instructions{
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.vote-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.vote-counter {
+    font-weight: bold;
+}
+
+#vote-button {
+    max-width: 3em;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* Enter comments */
+
+.comment-text {
+    outline: #E9D8D8 solid 0.2em;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 4em;
+    max-height: 20em;
+    height: 10em;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'ubuntu';
+    margin-top: 5px;
+}
+
+/* Show comments */
+
+.comments-number-and-button {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.comments-count {
+    width: 150%;
+}
+
+/* Display comments */
+
+.comment-list {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    list-style-type: none;
+    outline: #E9D8D8 solid 0.2em;
+    border-radius: 1em;
+}
+
+.comment-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-author {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.comment-date {
+    font-style: italic;
+}
+
+.comment-body{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.comment-buttons {
+    display: flex;
+    justify-content:space-between;
 }

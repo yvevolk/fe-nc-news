@@ -6,7 +6,6 @@ import Loader from './Loader.jsx'
 import CommentList from "./CommentList";
 import VoteCount from './VoteCount.jsx'
 import CommentAdder from './CommentAdder.jsx'
-import './SingleArticle.css'
 import DummyText from './DummyText.jsx'
 
 const SingleArticle = () => {
@@ -20,10 +19,8 @@ const [showButtonText, changeShowButtonText] = useState('Show comments')
 const showComments = () => {
     if (showButtonText === 'Show comments'){
     showCommentSection(
-        <div className = 'comments-section'>
-        <h2>Comments: {article.comment_count}</h2>
         <CommentList/>
-        </div>)
+    )
 changeShowButtonText('Hide comments')}
 else {showCommentSection(<></>); changeShowButtonText('Show comments')}
 }
@@ -38,29 +35,39 @@ useEffect(() => {
     })
 }, [article_id])
 
-if (isLoading) return <Loader/>
-
+if (isLoading)
+    return <Loader/>
     return (
-        <>
+        <div className = "article-surround">
         <article>
         <h2>{article.title}</h2>
         <p className = 'single-topic'>{article.topic}</p>
-        <p>By {article.author}</p>
-        <p>Posted on: {formattedDate} </p>
-        <div id = 'article-body'>
+        <p className = 'article-author'>By {article.author}</p>
+        <p className = 'article-date'>Posted on: {formattedDate} </p>
         <img id = 'main-image' src = {article.article_img_url}/>
-        <p className = 'body-text'>{article.body}</p>
-        <DummyText/></div>
+        <p className = 'blurb'>{article.body}</p>
+        <hr class = 'rounded'/>
+        <DummyText/>
+        </article>
 
-        </article>  <a className = 'big-button' href = '/'>Back</a>
+        <section className='votes-section'>
+        <hr class = 'rounded'/>
         <VoteCount votes = {article.votes} article_id = {article_id}/>
-        <section id = 'comments'>
-        <div id = 'comment-adder'>
+        <hr class = 'rounded'/></section>
+
+        <section className = 'comments-section'>
         <CommentAdder comment = '' article_id = {article_id}/>
-        </div></section>
-        <div id = 'show-button-container'><button id = 'show-button' onClick ={showComments}>{showButtonText}</button></div>
+        <div className = 'comments-number-and-button'>
+        <h3 className = 'comments-count'>Comments: {article.comment_count}</h3>
+        <button onClick ={showComments}>{showButtonText}</button>
+        </div>
         {commentSection}
-        </>
+        
+
+   
+        
+        </section>
+        </div>
     )
 }
 

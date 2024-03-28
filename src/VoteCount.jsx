@@ -1,4 +1,3 @@
-import './VoteCount.css'
 import {useState} from 'react'
 import { updateVotes } from './utils/api'
 
@@ -14,14 +13,13 @@ const addVote = (value) => {
 
     return(
         <section id = 'votes'>
-        <p className="vote-instructions">What do you think of this article? Add your vote:</p>
-        <div id = 'vote-container'>
-        <button className = 'vote-button' id = 'vote-button-up' aria-label='vote up' disabled = {voteDifference === 1} onClick={() => {
+        <p class ="vote-instructions">What do you think of this article? Add your vote:</p>
+        <div class = 'vote-container'>
+        <button className = 'button' id = 'vote-button' aria-label='vote up' disabled = {voteDifference === 1} onClick={() => {
             addVote(1)
         }}>👍</button>
-        <div className = 'vote-counter-container'>
-        <p className = 'vote-counter'>{votes + voteDifference}</p></div>
-        <button className = 'vote-button' id = 'vote-button-down' aria-label='vote down' 
+        <p className = 'vote-counter'>{votes + voteDifference}</p>
+        <button className = 'button' id = 'vote-button' aria-label='vote down' 
         disabled = {voteDifference === -1} onClick={() => {
             addVote(-1)
         }}>👎</button>
