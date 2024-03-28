@@ -8,9 +8,9 @@
 - Should work on all versions of Node v.0.10 or later - v.20 is recommended
 - React v. 18 recommended
 
-- A hosted version to try out can be found here: https://nc-news-0dd5.onrender.com
+- A hosted version to try out can be found here: https://nc-news-0dd5.onrender.com/api
 - Code can be found at: https://github.com/yvevolk/nc-news
-- For a list of endpoints, queries and example responses, see endpoint /api/ https://nc-news-0dd5.onrender.com/api
+- For a list of endpoints, queries and example responses, see endpoint /api/ https://nc-news-0dd5.onrender.com/api/
 
 # --- RUNNING SCRIPTS LOCALLY ---
 
@@ -30,5 +30,6 @@
  - App should run locally
 
 # --- FUTURE FEATURES PIPELINE ---
+ - Clean up code
  - Put logged in user into Context instead of hard code in CommentAdder
  - Style with Bootstrap or Tailwind
