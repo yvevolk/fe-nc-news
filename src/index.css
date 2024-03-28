@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    background-color: #E9D8D8
+}
+
+#fullheader {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #732A3F;
+    color: white;
+    font-family: 'ubuntu';
+    filter: drop-shadow(0px 10px 10px #00000057);
+    z-index: 1;
+}
+
+header{
+    text-align: right;
+    margin-right: 5%;
+}
+
+#site-title {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+#site-tagline {
+    margin-top: 0;
+    font-style: italic;
+}
+
+a {
+    color: #E9D8D8;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-button{
+    font-family: 'ubuntu';
+    font-weight: bold;
+    background-color: #732A3F;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    padding: 1%;
+    margin: 50;
+}
+
+.nav-button:hover{
+    background-color: #B47978;
+}
+
+#main-container {
+    padding-top: 190px;
+ }
+
+
+
+footer {
+    font-family: 'ubuntu';
+    text-align: center;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #732A3F;
+    color: white;
+}

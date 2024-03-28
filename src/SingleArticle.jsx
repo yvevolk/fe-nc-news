@@ -7,6 +7,7 @@ import CommentList from "./CommentList";
 import VoteCount from './VoteCount.jsx'
 import CommentAdder from './CommentAdder.jsx'
 import './SingleArticle.css'
+import DummyText from './DummyText.jsx'
 
 const SingleArticle = () => {
 const {article_id} = useParams();
@@ -48,7 +49,9 @@ if (isLoading) return <Loader/>
         <p>Posted on: {formattedDate} </p>
         <div id = 'article-body'>
         <img id = 'main-image' src = {article.article_img_url}/>
-        <p className = 'body-text'>{article.body}</p></div>
+        <p className = 'body-text'>{article.body}</p>
+        <DummyText/></div>
+
         </article>  <a className = 'big-button' href = '/'>Back</a>
         <VoteCount votes = {article.votes} article_id = {article_id}/>
         <section id = 'comments'>

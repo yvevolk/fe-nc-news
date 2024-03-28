@@ -1,8 +1,6 @@
-import './Header.css';
 import { useState, useEffect } from 'react';
-import {Route, Routes, Link} from 'react-router-dom';
-import {getTopics, getArticles} from './utils/api.js'
-
+import { Link, Router, Routes } from 'react-router-dom';
+import { getTopics } from './utils/api.js'
 
 const Header = () => {
     const [topics, setTopics] = useState([])
@@ -16,13 +14,14 @@ const Header = () => {
 return (
     <div id= 'fullheader'>
     <header>
-    <h1>NC News</h1>
-    <p className = 'tagline'>The latest and greatest news</p>
+    <h1 id = 'site-title'>NC News</h1>
+    <p id = 'site-tagline'>The latest and greatest news</p>
     </header>
     <nav>
-        <ul className = 'navigation'>
-                <button className='nav-button'><Link to = "/">Home</Link></button>
-                {topics.map((topic) => {
+        <ul id = 'navigation'>
+                <button className='nav-button'>
+                    <Link to = "/">Home</Link></button>
+                    {topics.map((topic) => {
                     return (<button key = {topic.slug} value = {topic.slug} className = 'nav-button'><Link to = {`/articles?topic=${topic.slug}`}> {topic.slug} </Link></button>)
                 })}
             </ul>

@@ -1,11 +1,12 @@
 import Main from './MainContainer.jsx'
 import Footer from './Footer.jsx'
-import './App.css'
+import Header from './Header.jsx'
 
 function App() {
 
    return (
     <>
+    <Header/>
     <Main/>
     <Footer/>
     </>

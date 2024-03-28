@@ -6,7 +6,9 @@ article {
 }
 
 .body-text {
-    padding-bottom: 30px;
+    font-weight:bold;
+    text-align: justify;
+    
 }
 
 h2 {
