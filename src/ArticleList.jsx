@@ -1,4 +1,3 @@
-import './ArticleList.css';
 import ArticleCard from './ArticleCard.jsx'
 import {useState, useEffect} from 'react';
 import {getArticles} from './utils/api.js';
@@ -23,8 +22,6 @@ if(e.target.value === 'sort_by=votesASC'){
    }
    else if(e.target.value === 'sort_by=votesDESC'){
     setArticles((articles) => [...articles].sort((a, b) => b.votes - a.votes))}
-    else if(e.target.value === 'sort_by=comment_countASC'){
-    setArticles((articles) => [...articles].sort((a, b) => a.comment_count - b.comment_count))}
     else if(e.target.value === 'sort_by=comment_countDESC'){
     setArticles((articles) => [...articles].sort((a, b) => b.comment_count - a.comment_count))}
     else {setArticles(defaultArticles)}
@@ -44,17 +41,16 @@ if(isLoading) return <Loader/>
 
 return (
     <section className = 'article-list'>
-        <h2 className = 'article-header'>{topic} Articles</h2>
+        <h2 id = 'articles-header'>{topic} Articles</h2>
         <div id = 'sort-by-filter'>
         <label htmlFor="sort-by">Sort articles by: </label>
             <select name="sort-by" id='sort-by' onChange = {handleSortChange}>
             <option value="sort_by=dateDESC">Newest (default)</option>
             <option value="sort_by=comment_countDESC">Most commented</option>
-            <option value="sort_by=comment_countASC">Least commented</option>
             <option value="sort_by=votesDESC">Most upvoted</option>
-            <option value="sort_by=votesASC">Most downvoted</option>
-        </select>
+            </select>
         </div>
+
         {articles.map((article) => {
             return(
             <ul className = 'articles' key = {article.article_id}>
@@ -63,7 +59,7 @@ return (
             title = {article.title}
             author = {article.author}
             topic = {article.topic}
-            date = {format(new Date(`${article.created_at}`), 'EEE d MMM yyyy HH:mm a')}
+            date = {format(new Date(`${article.created_at}`), 'EEE d MMM yyyy, HH:mm a')}
             votes = {article.votes}
             comments = {article.comment_count}
             image = {article.article_img_url}
