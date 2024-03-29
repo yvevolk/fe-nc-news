@@ -46,14 +46,14 @@ if (isLoading)
         <p className = 'article-date'>Posted on: {formattedDate} </p>
         <img id = 'main-image' src = {article.article_img_url}/>
         <p className = 'blurb'>{article.body}</p>
-        <hr class = 'rounded'/>
+        <hr/>
         <DummyText/>
         </article>
 
         <section className='votes-section'>
-        <hr class = 'rounded'/>
+        <hr/>
         <VoteCount votes = {article.votes} article_id = {article_id}/>
-        <hr class = 'rounded'/></section>
+        <hr/></section>
 
         <section className = 'comments-section'>
         <CommentAdder comment = '' article_id = {article_id}/>

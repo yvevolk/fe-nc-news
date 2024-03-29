@@ -1,7 +1,10 @@
 import { deleteComment } from './utils/api';
-const exampleUsername = 'grumpy19';
+import { useContext } from 'react';
+import { LoggedInUserContext } from './contexts/LoggedInUser.jsx';
 
 const CommentCard = ({author, time, body, votes, comment_id}) => {
+
+const {loggedInUser} = useContext(LoggedInUserContext)
 
 const deleteHandler = (e) => {
     e.preventDefault();
@@ -15,19 +18,20 @@ const deleteHandler = (e) => {
 }
 
     return(
-        <div className = 'single-comment'>
+        <>
             <div className = 'comment-details'>
             <p key = 'author' className ='comment-author'>{author} said:</p>
             <p key = 'time' className = 'comment-date'>{time}</p>
             </div>
             <p key = 'body' className = 'comment-body'>{body}</p>
-            <div className = 'comment-buttons'>
-            <button key = 'votes' className = 'votes' aria-label='votes'>{votes} 👍</button>
-            {author === exampleUsername && (
-                <button key = 'delete' className = 'delete' aria-label='delete' onClick = {deleteHandler}> 🗑️</button>  
-                                         )}
-     
-        </div></div>
+            <div className = 'comment-button-container'>
+            <button key = 'votes' className = 'comment-button' aria-label='votes'>{votes} 👍</button>
+            {author === loggedInUser && (
+                <button key = 'delete' className = 'comment-button' aria-label='delete' onClick = {deleteHandler}> 🗑️</button>)}
+            {author !== loggedInUser && (
+                <div className = "empty-space"></div>)}
+        </div>
+        </>
     )
 }
 

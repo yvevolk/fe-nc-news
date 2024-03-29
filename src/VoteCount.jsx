@@ -13,8 +13,8 @@ const addVote = (value) => {
 
     return(
         <section id = 'votes'>
-        <p class ="vote-instructions">What do you think of this article? Add your vote:</p>
-        <div class = 'vote-container'>
+        <p className ="vote-instructions">What do you think of this article? Add your vote:</p>
+        <div className = 'vote-container'>
         <button className = 'button' id = 'vote-button' aria-label='vote up' disabled = {voteDifference === 1} onClick={() => {
             addVote(1)
         }}>👍</button>
