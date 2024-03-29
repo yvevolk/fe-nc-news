@@ -11,6 +11,7 @@ const Header = () => {
         })
     }, [])
 
+
 return (
     <div id= 'fullheader'>
     <header>

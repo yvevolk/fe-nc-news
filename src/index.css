@@ -69,6 +69,7 @@ h2 {
 
 header{
     text-align: right;
+    margin-left: 5%;
     margin-right: 5%;
 }
 
@@ -82,9 +83,9 @@ header{
     font-style: italic;
 }
 
-
 #navigation {
     display: flex;
+    align-content: flex-start;
     justify-content: space-around;
 }
 
@@ -94,8 +95,8 @@ header{
     background-color: #732A3F;
     text-transform: capitalize;
     font-size: 1.2em;
-    padding: 1%;
-    margin: 50;
+    padding: 0.1em;
+    margin: 0.1em;
 }
 
 .nav-button:hover{
@@ -241,12 +242,14 @@ padding-bottom: 3%;
 .vote-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1em;
+    max-width: 1000px;
 }
 
 .vote-counter {
     font-weight: bold;
+    margin: 1em;
 }
 
 #vote-button {
@@ -258,7 +261,7 @@ padding-bottom: 3%;
 
 /* Enter comments */
 
-.comment-text {
+#comment-textentry {
     outline: #E9D8D8 solid 0.2em;
     min-width: 100%;
     max-width: 100%;
@@ -303,8 +306,11 @@ textarea {
 }
 
 .comment-details {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .comment-author {
@@ -321,7 +327,13 @@ textarea {
     margin-right: 0.5em;
 }
 
-.comment-buttons {
+.comment-button-container {
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around
+}
+
+.comment-button, .empty-space {
+    width: 7em;
+    padding: 1em;
+    margin-bottom: 1em;
 }
