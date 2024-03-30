@@ -7,8 +7,10 @@ function App() {
    return (
     <>
     <Header/>
+    <div id = 'main-and-footer'>
     <Main/>
     <Footer/>
+    </div>
     </>
   )
 }

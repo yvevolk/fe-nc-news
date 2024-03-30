@@ -9,20 +9,39 @@ const CommentList = () => {
 const {article_id} = useParams();
 const [comments, setComments] = useState([])
 const [isLoading, setIsLoading] = useState(true)
+const [defaultComments, setDefaultComments] = useState([])
 
 useEffect(() => {
     setIsLoading(true)
     getComments(article_id)
-    .then((comments) => {
+    .then((comments) => { 
+        setDefaultComments(comments)
         setComments(comments)
         setIsLoading(false)
     })
 }, [article_id])
 
+const handleSortChange = (e) => {
+    if(e.target.value === 'sort_by=votes'){
+    setComments((comments) => [...comments].sort((a, b) => b.votes - a.votes))}
+    else {setComments(defaultComments)}
+}
+
+
 if (isLoading) return <Loader/>
 
 return (
     <>
+
+<div id = 'sort-by-filter'>
+        <label htmlFor="sort-by">Sort comments by: </label>
+            <select name="sort-by" id='sort-by' onChange = {handleSortChange}>
+            <option value="sort_by=date">Newest (default)</option>
+            <option value="sort_by=votes" >Most upvoted</option>
+            </select>
+        </div>
+
+
     {comments.map((comment) => {
         return(
             <ul className = 'comment-list' key = {comment.comment_id}>
