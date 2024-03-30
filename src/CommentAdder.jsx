@@ -9,7 +9,7 @@ const {loggedInUser} = useContext(LoggedInUserContext)
    const handleSubmit = (e) => {
         postComment({
            "body": e.target[0].value,
-           "author": 'grumpy19',
+           "author": loggedInUser,
            }, article_id)
            .then((res) => {
             alert('Comment posted!')

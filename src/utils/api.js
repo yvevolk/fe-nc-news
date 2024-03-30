@@ -11,7 +11,6 @@ export const getTopics = () => {
 }
 
 export const getArticles = (filters, sort_by) => {
-    console.log(filters, sort_by)
     return newsApi.get('/articles/', {params: {topic: filters, sort_by: sort_by}}).then((res) => {
         return res.data.articles;
     })
@@ -42,9 +41,15 @@ export const postComment = (newComment, article_id) => {
     })
 }
 
+export const updateCommentVotes = (value, comment_id) => {
+    return newsApi.patch(`/comments/${comment_id}`, {"inc_votes": value}).then((res) => {
+        console.log('success')
+        return res.data.comment;
+    })
+}
+
 export const deleteComment = (comment_id) => {
     return newsApi.delete(`/comments/${comment_id}`).then((res) => {
-        console.log('comment deleted')
         return res.data.comment;
     })
 }

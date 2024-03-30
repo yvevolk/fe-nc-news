@@ -58,14 +58,10 @@ if (isLoading)
         <section className = 'comments-section'>
         <CommentAdder comment = '' article_id = {article_id}/>
         <div className = 'comments-number-and-button'>
-        <h3 className = 'comments-count'>Comments: {article.comment_count}</h3>
+        <h3 className = 'comments-count' aria-label = 'comments'>💬 Comments: {article.comment_count}</h3>
         <button onClick ={showComments}>{showButtonText}</button>
         </div>
         {commentSection}
-        
-
-   
-        
         </section>
         </div>
     )

@@ -14,7 +14,7 @@ return (
         <Route path = '/' element = {<ArticleList/>}/>
         <Route path = '/articles' element = {<ArticleList filters = {filters}/>}/>
         <Route path = '/articles/:article_id' element = {<SingleArticle/>}/>
-        </Routes>
+    </Routes>
     </main>
     </>
 )
